@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa O'Connor - Product Management Leader</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #e6f2ff;
+            --text-color: #333;
+            --light-text: #666;
+            --white: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
+            background-color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .header-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-text h2 {
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--secondary-color);
+        }
+        
+        h2.section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .interests {
+            flex: 1;
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .interests h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .company {
+            margin-bottom: 3rem;
+        }
+        
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .company-name {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .company-date {
+            color: var(--light-text);
+        }
+        
+        .position {
+            margin-bottom: 2rem;
+        }
+        
+        .position-title {
+            font-size: 1.25rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .position-date {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .project h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--secondary-color);
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .education {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .education h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education p {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .company-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Profile Image and Headline -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-image">LO</div>
+                <div class="header-text">
+                    <h1>Lisa O'Connor</h1>
+                    <h2>Product Management Leader</h2>
+                    <p>Accomplished leader with a strong track record of driving business growth through strategic product management, go-to-market execution and cross-functional collaboration. Excel in balancing both strategy and execution; can think strategically while also rolling up my sleeves to get things done.</p>
+                    <div class="social-links">
+                        <a href="mailto:lisaoconnor@example.com">Email</a>
+                        <a href="https://www.linkedin.com/in/lisaoconnor/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/lisaoconnor" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a skilled product management professional with over 18 years of experience in the financial services and telecommunications industries. My expertise lies in digital transformation, growth strategies, and creating exceptional customer experiences.</p>
+                    <p>Throughout my career, I've consistently delivered results by leveraging data-driven insights, fostering cross-functional collaboration, and maintaining a customer-centric approach. I excel in both strategic thinking and tactical execution, allowing me to drive initiatives from concept to successful implementation.</p>
+                    <p>My passion for technology and innovation has fueled my career, enabling me to lead transformative digital initiatives that have significantly improved business outcomes and customer satisfaction.</p>
+                </div>
+                <div class="interests">
+                    <h3>Interests & Activities</h3>
+                    <p>Since 2022, I've been actively involved with the Alzheimer's Association of New England, recruiting corporate sponsors and raising over $10,000 annually. I'm a committed participant in the Ride to End Alzheimer's, a 100-mile cycling event supporting research.</p>
+                    <p>As a Ride Leader with the Charles River Wheelers since 2023, I develop and lead cycling routes for this 2,000-member recreational cycling club. I'm also actively involved in bicycle advocacy and safety initiatives as a member of the Ride and Safety Committee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience and Projects Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Projects</h2>
+            
+            <!-- U.S. Bank -->
+            <div class="company">
+                <div class="company-header">
+                    <h3 class="company-name">U.S. Bank</h3>
+                    <div class="company-date">December 2022 - November 2024</div>
+                </div>
+                
+                <div class="position">
+                    <h3 class="position-title">Growth Product Manager</h3>
+                    
+                    <div class="project">
+                        <h4>Project Name: Consumer Lending Product Growth Strategy</h4>
+                        <p><strong>Project Overview:</strong> Led the development and execution of a data-driven growth strategy to scale a new consumer lending product. Created comprehensive go-to-market materials and sales enablement resources for a large salesforce while building pipeline in a startup environment.</p>
+                        <p><strong>Impact and Achievements:</strong> Drove a 50% increase in product adoption, secured 20+ deals with an expected financing volume of $500MM, and established effective performance metrics in Salesforce CRM to monitor pipeline activity and optimize sales strategies.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Sales Enablement and Marketing Campaign Development</h4>
+                        <p><strong>Project Overview:</strong> Partnered with marketing and customer-facing teams to create integrated marketing and sales campaigns, training materials, digital assets, and sales playbooks for a 100+ person salesforce.</p>
+                        <p><strong>Impact and Achievements:</strong> Enhanced salesforce effectiveness through comprehensive sales enablement resources, contributing to increased product adoption and pipeline growth.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Product Backlog Management and Requirements Engineering</h4>
+                        <p><strong>Project Overview:</strong> Managed the product backlog and translated customer requests into clear product requirements, user stories, and acceptance criteria for development teams.</p>
+                        <p><strong>Impact and Achievements:</strong> Streamlined the development process by providing clear, actionable requirements that accurately reflected customer needs, resulting in more targeted product improvements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Citizens Financial Group -->
+            <div class="company">
+                <div class="company-header">
+                    <h3 class="company-name">Citizens Financial Group</h3>
+                    <div class="company-date">January 2014 - December 2022</div>
+                </div>
+                
+                <div class="position">
+                    <h3 class="position-title">Growth & Strategic Partnerships, Senior Manager</h3>
+                    <div class="position-date">June 2021 - December 2022</div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Omnichannel Sales and Engagement Program</h4>
+                        <p><strong>Project Overview:</strong> Designed comprehensive omnichannel sales and engagement programs across e-commerce and retail channels for a $1.2B consumer lending program, focusing on enhancing acquisition and retention strategies.</p>
+                        <p><strong>Impact and Achievements:</strong> Increased ROI by 30% while simultaneously improving customer experience, creating a more cohesive journey across digital and physical touchpoints.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Product Optimization Initiative</h4>
+                        <p><strong>Project Overview:</strong> Collaborated with cross-functional teams to identify friction points and implement product optimizations aimed at improving customer retention and engagement.</p>
+                        <p><strong>Impact and Achievements:</strong> Enhanced customer satisfaction and product stickiness through targeted improvements to the user experience, resulting in improved retention metrics.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Conversion Funnel Optimization</h4>
+                        <p><strong>Project Overview:</strong> Developed and optimized conversion funnels across multiple channels, leveraging A/B testing and data analytics to identify and address drop-off points.</p>
+                        <p><strong>Impact and Achievements:</strong> Significantly improved conversion rates through data-driven optimizations, contributing to the overall growth of the consumer lending program.</p>
+                    </div>
+                </div>
+                
+                <div class="position">
+                    <h3 class="position-title">Digital Transformation, Senior Manager</h3>
+                    <div class="position-date">January 2019 - June 2021</div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Digital Wallet Enhancement Initiative</h4>
+                        <p><strong>Project Overview:</strong> Spearheaded digital sales enablement strategies for Mobile Wallets, focusing on increasing adoption and revenue generation through improved customer experiences and targeted marketing.</p>
+                        <p><strong>Impact and Achievements:</strong> Achieved a 53% increase in digital wallet tokenization and 100% year-over-year revenue increase, establishing Mobile Wallets as a significant revenue contributor.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Online Bill Pay Management</h4>
+                        <p><strong>Project Overview:</strong> Monitored, maintained, and troubleshot the customer experience for Online Bill Pay, a highly visible product accounting for over $1B in monthly payments, ensuring system reliability and user satisfaction.</p>
+                        <p><strong>Impact and Achievements:</strong> Maintained high reliability for a critical financial service handling over $12B in annual payments while continuously improving the user experience based on customer feedback.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Customer Journey Optimization</h4>
+                        <p><strong>Project Overview:</strong> Partnered with UX and marketing teams to optimize customer journeys, focusing on improving conversion rates and reducing drop-off in critical onboarding flows for digital financial products.</p>
+                        <p><strong>Impact and Achievements:</strong> Streamlined onboarding processes, resulting in higher completion rates and improved customer satisfaction during the critical early engagement period.</p>
+                    </div>
+                </div>
+                
+                <div class="position">
+                    <h3 class="position-title">Digital Product Manager</h3>
+                    <div class="position-date">January 2014 - January 2019</div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Digital Checking Account Sales Enhancement</h4>
+                        <p><strong>Project Overview:</strong> Owned end-to-end digital application experiences in mobile and web for Consumer Checking, implementing strategic growth optimizations and iterative enhancements to drive online sales.</p>
+                        <p><strong>Impact and Achievements:</strong> Increased online checking sales by 300% over three years, transforming digital channels into a primary acquisition path for new accounts.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Digital Identity Authentication Implementation</h4>
+                        <p><strong>Project Overview:</strong> Implemented digital identity authentication solutions to streamline the application process while maintaining security and compliance requirements.</p>
+                        <p><strong>Impact and Achievements:</strong> Dramatically increased application conversions from 15% to 55%, removing a significant barrier in the customer acquisition process.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: In-App Cross-Sell Strategy</h4>
+                        <p><strong>Project Overview:</strong> Implemented targeted in-app cross-sell strategies for mobile and web platforms, leveraging customer data to present relevant product offerings at optimal points in the customer journey.</p>
+                        <p><strong>Impact and Achievements:</strong> Achieved a 20% increase in digital account opening through contextual, personalized product recommendations.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: A/B Testing Program Development</h4>
+                        <p><strong>Project Overview:</strong> Created and executed comprehensive A/B testing programs focused on improving application completion rates across digital channels.</p>
+                        <p><strong>Impact and Achievements:</strong> Established a data-driven culture of continuous improvement, resulting in incremental gains in conversion metrics through evidence-based enhancements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Verizon Communications -->
+            <div class="company">
+                <div class="company-header">
+                    <h3 class="company-name">Verizon Communications</h3>
+                    <div class="company-date">June 2006 - January 2013</div>
+                </div>
+                
+                <div class="position">
+                    <h3 class="position-title">Digital Product Owner</h3>
+                    
+                    <div class="project">
+                        <h4>Project Name: B2B eCommerce Platform Development</h4>
+                        <p><strong>Project Overview:</strong> Managed and implemented unique B2B eCommerce sites supporting enterprise clients with contracts valued up to $550M, focusing on creating tailored digital experiences that addressed specific business requirements.</p>
+                        <p><strong>Impact and Achievements:</strong> Delivered customized eCommerce solutions that effectively serviced high-value enterprise accounts, contributing to client retention and satisfaction.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: B2B Sales Enablement Solutions</h4>
+                        <p><strong>Project Overview:</strong> Developed comprehensive B2B sales enablement solutions designed to streamline the sales process and provide sales teams with the digital tools needed to effectively engage enterprise clients.</p>
+                        <p><strong>Impact and Achievements:</strong> Increased revenue by 25% through improved sales processes and digital tools that enhanced the effectiveness of B2B sales teams.</p>
+                    </div>
+                    
+                    <div class="project">
+                        <h4>Project Name: Cross-Functional Enhancement Initiative</h4>
+                        <p><strong>Project Overview:</strong> Partnered with IT, legal, marketing, and sales departments to deliver data-driven enhancements focused on improving customer engagement and transaction efficiency.</p>
+                        <p><strong>Impact and Achievements:</strong> Successfully bridged departmental silos to create more integrated digital experiences that better served client needs while improving operational efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Product Management</h3>
+                    <ul class="skill-list">
+                        <li>Product Lifecycle Management</li>
+                        <li>Growth Product Strategy</li>
+                        <li>Marketing Product Management</li>
+                        <li>Agile and Scrum Methodologies</li>
+                        <li>Product Backlog Management</li>
+                        <li>Requirements Engineering</li>
+                        <li>User Story Development</li>
+                        <li>Go-to-Market Execution</li>
+                        <li>A/B Testing</li>
+                        <li>Conversion Optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Leadership</h3>
+                    <ul class="skill-list">
+                        <li>Strategic Planning</li>
+                        <li>Team Leadership</li>
+                        <li>Cross-Functional Collaboration</li>
+                        <li>Stakeholder Management</li>
+                        <li>Budget Management</li>
+                        <li>Executive Presentations</li>
+                        <li>Vendor Management</li>
+                        <li>Change Management</li>
+                        <li>Mentoring</li>
+                        <li>Project & Program Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Salesforce CRM</li>
+                        <li>Google Analytics</li>
+                        <li>Digital Sales Platforms</li>
+                        <li>Mobile Wallet Technologies</li>
+                        <li>B2B eCommerce Platforms</li>
+                        <li>Payment Processing Systems</li>
+                        <li>Digital Identity Authentication</li>
+                        <li>Data Analysis & Reporting</li>
+                        <li>CRM Systems</li>
+                        <li>Digital Marketing Tools</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Business Acumen</li>
+                        <li>Strategic Thinking</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Presentation Skills</li>
+                        <li>Negotiation</li>
+                        <li>Adaptability</li>
+                        <li>Customer-Centric Approach</li>
+                        <li>Continuous Improvement Mindset</li>
+                        <li>Relationship Building</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education">
+                <h3>Master of Business Administration (MBA), Marketing</h3>
+                <p>Rutgers University, NJ</p>
+            </div>
+            
+            <div class="education">
+                <h3>Bachelor of Business Administration (BBA), Finance</h3>
+                <p>University of Texas at Austin, TX</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lisa O'Connor. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
